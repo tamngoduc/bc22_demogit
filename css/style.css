@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hind", sans-serif;
+}
+
+header {
+  position: absolute;
+  z-index: 999;
+  /* z-index: do uu tien, cao lon uu tien cang cao, cai nao de len cai nao, di chung voi position */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo i {
+  color: #28a745;
+  font-size: 2.5rem;
+}
+
+.logo span {
+  font-size: 2rem;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: #28a745;
+  transition: all 0.5s;
+}
+
+.menu li.active::after {
+  width: 100%;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+/* Carousel */
+.carousel-item {
+  background-image: url(../image/finland.jpg);
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  /* don vi tuong doi, tuong tu % */
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url(../image/finland.jpg);
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url(../image/mountains.jpg);
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url(../image/mountains-1.jpg);
+}
+
+.carousel__thumb {
+  width: 140px;
+  margin: auto;
+}
+
+.carousel__thumb img {
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  /* da co thuoc tinh position: absolute mac dinh cua bs4 nen khong dung display:flex: duoc vi khong con la` block */
+  top: 50%;
+  transform: translateY(-50%);
+}
